@@ -12,7 +12,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 apt-get update
-apt-get install -y nginx nodejs npm rsync certbot python3-certbot-nginx
+apt-get install -y nginx nodejs rsync certbot python3-certbot-nginx
 
 mkdir -p "$APP_DIR"
 rsync -av --delete ./ "$APP_DIR" --exclude .git --exclude node_modules --exclude .env
