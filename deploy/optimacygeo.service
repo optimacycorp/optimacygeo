@@ -1,0 +1,16 @@
+[Unit]
+Description=Optimacy Geomatics Services website
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/optimacygeo
+EnvironmentFile=/var/www/optimacygeo/.env
+ExecStart=/usr/bin/node /var/www/optimacygeo/server.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
