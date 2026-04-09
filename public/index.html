@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="page-shell header-inner">
         <a class="brand brand-compact" href="#top" aria-label="Optimacy Geomatics Services LLC home">
@@ -37,7 +38,7 @@
           Menu
         </button>
 
-        <nav class="site-nav" id="siteNav">
+        <nav class="site-nav" id="siteNav" aria-label="Primary">
           <a href="#services">Services</a>
           <a href="#experience">Experience</a>
           <a href="#equipment">Equipment</a>
@@ -47,7 +48,7 @@
       </div>
     </header>
 
-    <main id="top">
+    <main id="main-content" tabindex="-1">
       <section class="hero section-first">
         <div class="page-shell hero-grid">
           <div class="hero-main">
@@ -91,6 +92,10 @@
             <div class="hero-panel-block">
               <span class="micro-label">Working model</span>
               <strong>Contract support for licensed survey teams, overflow work, and stakeholder coordination</strong>
+            </div>
+            <div class="hero-panel-block">
+              <span class="micro-label">Response window</span>
+              <strong>Initial inquiries are typically reviewed within one business day.</strong>
             </div>
           </aside>
         </div>
@@ -389,11 +394,13 @@
               <li>Based in Colorado Springs, Colorado</li>
               <li>Phone: <a href="tel:17199648009">719-964-8009</a></li>
               <li>Email: <a href="mailto:optimacycorp@gmail.com">optimacycorp@gmail.com</a></li>
+              <li>Typical response window: within one business day</li>
             </ul>
           </div>
 
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" aria-describedby="formIntro">
             <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" class="hp-field" />
+            <p class="form-intro" id="formIntro">Use this form for project intake, overflow support requests, or research and documentation questions.</p>
             <label>
               Name*
               <input type="text" name="name" required />
@@ -435,10 +442,11 @@
               <textarea
                 name="message"
                 rows="7"
+                aria-describedby="messageHelp"
                 placeholder="Describe the property, issue, timeline, and any known title, survey, or access questions."
                 required
               ></textarea>
-              <span class="field-help">Include the property, issue, timeline, and any known title, survey, or access questions.</span>
+              <span class="field-help" id="messageHelp">Include the property, issue, timeline, and any known title, survey, or access questions.</span>
             </label>
             <button class="button button-primary" type="submit">Send Project Details</button>
             <p class="submit-note">Initial inquiries are reviewed and followed up by email.</p>
@@ -451,6 +459,7 @@
     <footer class="site-footer">
       <div class="page-shell footer-inner">
         <p>Optimacy Geomatics Services LLC | Colorado geomatics support for research, field assistance, and project documentation.</p>
+        <p>Works with licensed surveyors, title-related projects, developers, landowners, and issue-heavy project teams across Colorado.</p>
         <p>
           Compliance note: Optimacy does not represent Thomas Costandine as a currently licensed land surveyor. Licensed-direction
           work is handled under the direction of licensed professionals where required.

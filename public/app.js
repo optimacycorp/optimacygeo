@@ -2,18 +2,46 @@ const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.getElementById('siteNav');
+const mainContent = document.getElementById('main-content');
+
+function closeMenu() {
+  if (!menuToggle || !siteNav) {
+    return;
+  }
+
+  siteNav.classList.remove('is-open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('nav-open');
+}
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener('click', () => {
     const isOpen = siteNav.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-open', isOpen);
   });
 
   siteNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      siteNav.classList.remove('is-open');
-      menuToggle.setAttribute('aria-expanded', 'false');
+      closeMenu();
     });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!siteNav.classList.contains('is-open')) {
+      return;
+    }
+
+    if (!siteNav.contains(event.target) && !menuToggle.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && siteNav.classList.contains('is-open')) {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
 }
 
@@ -42,6 +70,9 @@ if (form && statusEl) {
 
       form.reset();
       statusEl.textContent = result.message;
+      if (mainContent) {
+        statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     } catch (error) {
       statusEl.textContent = error.message || 'Unable to send your message right now.';
       statusEl.classList.add('error');

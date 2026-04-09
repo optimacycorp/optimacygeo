@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -38,6 +39,23 @@ img {
 
 a {
   color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 .page-shell {
@@ -514,6 +532,13 @@ label,
   gap: 1rem;
 }
 
+.form-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
 label {
   display: grid;
   gap: 0.45rem;
@@ -641,6 +666,10 @@ textarea:focus,
     box-shadow: var(--shadow);
   }
 
+  body.nav-open {
+    overflow: hidden;
+  }
+
   .site-nav.is-open {
     display: flex;
   }
@@ -670,6 +699,10 @@ textarea:focus,
   .header-inner {
     min-height: 76px;
     position: relative;
+  }
+
+  html {
+    scroll-padding-top: 90px;
   }
 
   .brand img {
