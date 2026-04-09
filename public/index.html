@@ -3,177 +3,395 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Optimacy Geomatics Services LLC | Survey Support and Geomatics Research</title>
+    <title>Optimacy Geomatics Services LLC | Colorado Geomatics Support</title>
     <meta
       name="description"
-      content="Optimacy Geomatics Services LLC provides survey support, boundary research, title analysis, field data collection, and documentation support in Colorado under the direction of licensed professionals when required."
+      content="Optimacy Geomatics Services LLC provides Colorado geomatics support for boundary research, field data collection, record clarification, and project-ready documentation under licensed direction when required."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top" aria-label="Optimacy Geomatics Services LLC home">
+    <header class="site-header">
+      <div class="page-shell header-inner">
+        <a class="brand brand-compact" href="#top" aria-label="Optimacy Geomatics Services LLC home">
           <img src="/assets/logo.png" alt="Optimacy Geomatics Services LLC logo" />
-          <div>
+          <div class="brand-copy">
             <span>Optimacy Geomatics Services LLC</span>
-            <strong>Colorado Survey Support and Geomatics Research</strong>
+            <strong>Colorado Geomatics Support</strong>
           </div>
         </a>
-        <nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+
+        <nav class="site-nav" id="siteNav">
           <a href="#services">Services</a>
-          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#equipment">Equipment</a>
           <a href="#contact">Contact</a>
+          <a class="button button-primary nav-cta" href="#contact">Request Intake</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Boundary research. Field support. Project-ready documentation.</p>
-            <h1>Geomatics support built for licensed survey teams, property stakeholders, and complex boundary questions.</h1>
+    <main id="top">
+      <section class="hero section-first">
+        <div class="page-shell hero-grid">
+          <div class="hero-main">
+            <div class="hero-lockup">
+              <img src="/assets/logo.png" alt="Optimacy Geomatics Services LLC logo" />
+              <div>
+                <p class="eyebrow">Colorado geomatics support</p>
+                <p class="hero-lockup-text">Optimacy Geomatics Services LLC</p>
+              </div>
+            </div>
+            <h1>Geomatics support for boundary research, field data, and project-ready documentation in Colorado.</h1>
             <p class="lede">
-              Optimacy Geomatics Services LLC provides contractor-based survey support in Colorado, combining record research,
-              field data collection, equipment capability, and practical coordination for projects that need strong groundwork.
+              Optimacy supports licensed surveyors, developers, property owners, and title-related projects with research,
+              field assistance, and documentation that helps move difficult projects forward.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contact">Request Project Intake</a>
-              <a class="button button-secondary" href="mailto:optimacycorp@gmail.com">Email Optimacy</a>
+              <a class="button button-primary" href="#contact">Request Intake</a>
+              <a class="button button-secondary" href="#services">Explore Services</a>
             </div>
-            <div class="hero-note">
-              <strong>Important:</strong> Thomas Costandine is not currently licensed as a land surveyor. Services are offered as
-              contractor support and geomatics assistance, with work requiring licensure performed under the direction of licensed professionals.
+            <div class="trust-chips" aria-label="Key service strengths">
+              <span>Boundary &amp; title research</span>
+              <span>Field support with modern equipment</span>
+              <span>Documentation under licensed direction when required</span>
             </div>
+            <p class="compliance-note">
+              Compliance note: Thomas Costandine is not currently licensed as a land surveyor. Optimacy provides contractor-based
+              geomatics support, research, field assistance, and documentation support, with licensed-direction work handled under
+              the direction of licensed professionals where required.
+            </p>
           </div>
-          <aside class="hero-card">
-            <div class="stat">
-              <span>Focus</span>
-              <strong>Boundary, title, and documentation support</strong>
+
+          <aside class="hero-panel">
+            <div class="hero-panel-block">
+              <span class="micro-label">Primary focus</span>
+              <strong>Boundary, title, and documentation support for Colorado projects</strong>
             </div>
-            <div class="stat">
-              <span>Education Path</span>
-              <strong>AAS in Land Surveying and Geomatics in progress</strong>
+            <div class="hero-panel-block">
+              <span class="micro-label">Service area</span>
+              <strong>Based in Colorado Springs and supporting projects across Colorado</strong>
             </div>
-            <div class="stat">
-              <span>Next Milestones</span>
-              <strong>FS exam, then Colorado LSIT enrollment</strong>
+            <div class="hero-panel-block">
+              <span class="micro-label">Working model</span>
+              <strong>Contract support for licensed survey teams, overflow work, and stakeholder coordination</strong>
             </div>
           </aside>
-        </section>
+        </div>
+      </section>
 
-        <section class="section grid-two" id="services">
-          <div>
+      <section class="section" id="who-we-help">
+        <div class="page-shell">
+          <div class="section-heading">
+            <p class="section-label">Who We Help</p>
+            <h2>Built for the kinds of projects that need research, field support, and organized documentation.</h2>
+          </div>
+          <div class="audience-grid">
+            <article class="audience-card">
+              <h3>Licensed surveyors needing contractor support</h3>
+              <p>Support when your team needs extra research, field assistance, or help organizing difficult record issues.</p>
+              <ul>
+                <li>Overflow boundary research</li>
+                <li>Field support and reconnaissance</li>
+                <li>Draft documentation for licensed review</li>
+              </ul>
+              <a href="#contact">Request intake</a>
+            </article>
+            <article class="audience-card">
+              <h3>Developers and landowners facing boundary or document issues</h3>
+              <p>Project support for owners and development teams who need the record and field picture clarified before decisions move forward.</p>
+              <ul>
+                <li>Conflicting legal descriptions</li>
+                <li>Easement and access questions</li>
+                <li>Documentation support for active projects</li>
+              </ul>
+              <a href="#contact">Request intake</a>
+            </article>
+            <article class="audience-card">
+              <h3>Title-related projects needing record clarification</h3>
+              <p>Research support for projects where title review, historical conveyances, or record inconsistencies need a clearer fact pattern.</p>
+              <ul>
+                <li>Chain-of-title support</li>
+                <li>Historical map and deed review</li>
+                <li>Issue summaries for review teams</li>
+              </ul>
+              <a href="#contact">Request intake</a>
+            </article>
+            <article class="audience-card">
+              <h3>Projects requiring research, field support, and organized documentation</h3>
+              <p>Useful when the challenge is not one task, but coordinating multiple moving parts across records, fieldwork, and follow-up.</p>
+              <ul>
+                <li>Record compilation</li>
+                <li>Field-office coordination</li>
+                <li>Deliverable preparation support</li>
+              </ul>
+              <a href="#contact">Request intake</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="page-shell">
+          <div class="section-heading">
             <p class="section-label">Services</p>
-            <h2>Support that helps projects move with better records, cleaner field intelligence, and clearer communication.</h2>
+            <h2>Specialized support structured around what the project needs and why it matters.</h2>
           </div>
-          <div class="cards">
-            <article class="card">
-              <h3>Boundary and title research</h3>
-              <p>Deed review, chain-of-title analysis, easement interpretation, conflicting description review, and historical survey research.</p>
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Boundary &amp; Title Research</h3>
+              <ul>
+                <li>Deed and record review</li>
+                <li>Chain-of-title support</li>
+                <li>Easement and ROW review</li>
+                <li>Conflicting legal description analysis</li>
+                <li>Historical survey and map research</li>
+              </ul>
+              <p class="outcome-line">Clarify the record before field work, title review, or retracement decisions go sideways.</p>
             </article>
-            <article class="card">
-              <h3>Survey field support</h3>
-              <p>Monument recovery, reconnaissance, GNSS and total station field support, and as-built documentation assistance.</p>
+            <article class="service-card">
+              <h3>Field Support &amp; Data Collection</h3>
+              <ul>
+                <li>Monument recovery and reconnaissance</li>
+                <li>GNSS and total station support</li>
+                <li>As-built site data capture</li>
+                <li>Control and field note support</li>
+                <li>Equipment-assisted documentation</li>
+              </ul>
+              <p class="outcome-line">Get cleaner field intelligence for projects that need dependable groundwork.</p>
             </article>
-            <article class="card">
-              <h3>Documentation support</h3>
-              <p>Boundary research summaries, legal description drafting support, easement exhibit preparation, and project coordination notes.</p>
+            <article class="service-card">
+              <h3>Documentation &amp; Exhibits</h3>
+              <ul>
+                <li>Boundary research summaries</li>
+                <li>Legal description drafting support</li>
+                <li>Easement exhibit support</li>
+                <li>Coordination notes and project documentation</li>
+                <li>Deliverable preparation for licensed review</li>
+              </ul>
+              <p class="outcome-line">Turn scattered research and field findings into usable project documentation.</p>
             </article>
-            <article class="card">
-              <h3>Project coordination</h3>
-              <p>Communication support with licensed surveyors, title companies, planners, owners, and developers to keep the record trail aligned.</p>
+            <article class="service-card">
+              <h3>Project Coordination</h3>
+              <ul>
+                <li>Support between surveyors, title, planners, owners, and developers</li>
+                <li>Issue tracking</li>
+                <li>Record compilation</li>
+                <li>Response support for clarification requests</li>
+              </ul>
+              <p class="outcome-line">Keep communication aligned when a project involves multiple stakeholders and incomplete records.</p>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="section band" id="about">
-          <div class="band-copy">
-            <p class="section-label">About Thomas Costandine</p>
-            <h2>Grounded in active project work now, with a clear path toward future licensure.</h2>
-            <p>
-              Thomas Costandine founded Optimacy Geomatics Services LLC to provide practical geomatics and survey support while continuing formal land surveying education.
-              Current work includes boundary research, title analysis, documentation support, and field assistance using modern survey equipment.
-            </p>
-            <p>
-              He is currently pursuing an Associate of Applied Science in Land Surveying and Geomatics at Colorado Mesa University, with coursework in field work,
-              surveying calculations, legal aspects of surveying, and real property descriptions.
-            </p>
-          </div>
-          <div class="timeline">
-            <div>
-              <span>Now</span>
-              <strong>Contract survey support and geomatics analysis</strong>
-            </div>
-            <div>
-              <span>In Progress</span>
-              <strong>Colorado Mesa University AAS target completion: May 2027</strong>
-            </div>
-            <div>
-              <span>Planned</span>
-              <strong>NCEES Fundamentals of Surveying exam and Colorado LSIT enrollment</strong>
-            </div>
-          </div>
-        </section>
-
-        <section class="section projects">
-          <div>
+      <section class="section" id="experience">
+        <div class="page-shell">
+          <div class="section-heading">
             <p class="section-label">Representative Experience</p>
-            <h2>Examples of the kind of support already being delivered.</h2>
+            <h2>Applied support for projects with unclear records, coordination challenges, and boundary-related questions.</h2>
           </div>
-          <div class="project-list">
-            <article class="project">
-              <h3>3245 Rampart Range Road</h3>
-              <p>
-                Conducted record research and reviewed conflicting deed descriptions, coordinated with title professionals and surveyors,
-                and supported documentation tied to a recorded scrivener's affidavit correcting the title record.
-              </p>
+          <div class="case-study-grid">
+            <article class="case-study">
+              <div class="case-meta">Rampart Range Road</div>
+              <h3>Boundary documentation support tied to conflicting deed language and title issues.</h3>
+              <dl>
+                <div>
+                  <dt>Project type</dt>
+                  <dd>Boundary documentation support</dd>
+                </div>
+                <div>
+                  <dt>Challenge</dt>
+                  <dd>Conflicting deed language and title or document issues affecting the project record trail.</dd>
+                </div>
+                <div>
+                  <dt>Support provided</dt>
+                  <dd>Record research, deed comparison, and coordination with title professionals and surveyors.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>Documentation support tied to a scrivener's affidavit and a clearer record trail for project review.</dd>
+                </div>
+              </dl>
             </article>
-            <article class="project">
-              <h3>122 Grinde Drive, Fountain, Colorado</h3>
-              <p>
-                Performed chain-of-title and plat research identifying a dual-dimension discrepancy, prepared retracement analysis,
-                and coordinated with Land Title Guarantee Company regarding underwriting review and clarification needs.
-              </p>
+            <article class="case-study">
+              <div class="case-meta">Grinde Drive, Fountain</div>
+              <h3>Retracement-focused research supporting review of a chain-of-title and plat discrepancy.</h3>
+              <dl>
+                <div>
+                  <dt>Project type</dt>
+                  <dd>Boundary retracement analysis</dd>
+                </div>
+                <div>
+                  <dt>Challenge</dt>
+                  <dd>Chain-of-title and plat dimension discrepancy with underwriting and interpretation implications.</dd>
+                </div>
+                <div>
+                  <dt>Support provided</dt>
+                  <dd>Retracement-focused research, discrepancy analysis, and clarification support for title and survey review.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>Better-defined issue framing for title and survey review, with clearer documentation of the discrepancy.</dd>
+                </div>
+              </dl>
             </article>
           </div>
-        </section>
+          <p class="section-footnote">Additional project details are available on request where appropriate.</p>
+        </div>
+      </section>
 
-        <section class="section" id="equipment">
-          <div>
-            <p class="section-label">Equipment and Workflow</p>
-            <h2>Ready to support field and office needs with modern instruments and practical deliverables.</h2>
+      <section class="section" id="equipment">
+        <div class="page-shell">
+          <div class="section-heading">
+            <p class="section-label">Equipment / Workflow</p>
+            <h2>Equipment capability organized around field workflows, documentation needs, and project support.</h2>
           </div>
           <div class="equipment-grid">
-            <div class="equipment-card"><strong>Trimble S7</strong><span>Robotic total station</span></div>
-            <div class="equipment-card"><strong>Emlid Reach RS4 Pro</strong><span>GNSS base and rover system</span></div>
-            <div class="equipment-card"><strong>3DMakerPro Eagle RTK</strong><span>4-camera scanner workflow</span></div>
-            <div class="equipment-card"><strong>Trimble TSC3</strong><span>SurveyPro 6.1.1.19 data collector</span></div>
-            <div class="equipment-card"><strong>Leica NA332</strong><span>Auto optical level</span></div>
-            <div class="equipment-card"><strong>David White DT8</strong><span>Theodolite and optical support gear</span></div>
+            <article class="equipment-card">
+              <span class="micro-label">Robotic total station</span>
+              <h3>Trimble S7</h3>
+              <p>Robotic total station support for field collection, control workflows, and project documentation assistance.</p>
+            </article>
+            <article class="equipment-card">
+              <span class="micro-label">GNSS / RTK</span>
+              <h3>Emlid Reach RS4 Pro</h3>
+              <p>Flexible GNSS setup for site control, reconnaissance support, and field positioning workflows.</p>
+            </article>
+            <article class="equipment-card">
+              <span class="micro-label">Scanning / site capture</span>
+              <h3>3DMakerPro Eagle RTK</h3>
+              <p>Supplemental site capture workflow where appropriate for documentation and field context gathering.</p>
+            </article>
+            <article class="equipment-card">
+              <span class="micro-label">Data collectors</span>
+              <h3>Trimble TSC3 with SurveyPro</h3>
+              <p>Field data collection support for organized observations, coordination, and project-ready records.</p>
+            </article>
+            <article class="equipment-card">
+              <span class="micro-label">Optical leveling</span>
+              <h3>Leica NA332</h3>
+              <p>Optical leveling support for field tasks that benefit from dependable elevation and control workflows.</p>
+            </article>
+            <article class="equipment-card">
+              <span class="micro-label">Support gear</span>
+              <h3>David White DT8 and field accessories</h3>
+              <p>Theodolite, prisms, poles, bipods, and supporting tools for practical field execution and documentation.</p>
+            </article>
           </div>
-        </section>
+          <p class="section-footnote">Equipment use is tailored to project needs and licensed supervision requirements where applicable.</p>
+        </div>
+      </section>
 
-        <section class="section contact-section" id="contact">
-          <div class="contact-copy">
-            <p class="section-label">Project Intake</p>
-            <h2>Share the project details and Optimacy will follow up by email.</h2>
+      <section class="section" id="about">
+        <div class="page-shell about-grid">
+          <div class="about-main">
+            <div class="section-heading">
+              <p class="section-label">About</p>
+              <h2>Present capability first, with technical grounding and clear boundaries around licensed work.</h2>
+            </div>
             <p>
-              Use the form to describe the property, boundary question, documentation need, or support scope. Messages are forwarded to
-              <a href="mailto:optimacycorp@gmail.com">optimacycorp@gmail.com</a>.
+              Optimacy Geomatics Services LLC provides practical support for projects involving boundary research, title and deed review,
+              field assistance, documentation prep, and coordination across stakeholders. The work is built around detail, record clarity,
+              and helping projects move with better information.
             </p>
+            <p>
+              Thomas Costandine is also pursuing an Associate of Applied Science in Land Surveying and Geomatics at Colorado Mesa University,
+              with coursework in field work, surveying calculations, legal aspects of surveying, and real property descriptions. That education
+              supports the technical rigor behind current project work rather than replacing it.
+            </p>
+            <p class="compliance-note compliance-note-inline">
+              Licensed-direction note: work requiring professional licensure is performed under the direction of licensed professionals where applicable.
+            </p>
+          </div>
+          <aside class="working-style">
+            <p class="section-label">Working Style</p>
+            <ul>
+              <li>Detail-oriented and record-driven</li>
+              <li>Practical field and office coordination</li>
+              <li>Focused on difficult boundary and document questions</li>
+              <li>Useful support for overflow, backlog, and issue-heavy projects</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="why-optimacy">
+        <div class="page-shell">
+          <div class="section-heading">
+            <p class="section-label">Why Optimacy</p>
+            <h2>A clearer fit for projects that need support inside licensed workflows without overstating the role.</h2>
+          </div>
+          <div class="why-grid">
+            <article class="why-card">
+              <h3>Record-focused project support</h3>
+              <p>Research and documentation are built to clarify the issue before field and review effort gets wasted.</p>
+            </article>
+            <article class="why-card">
+              <h3>Clear boundaries around licensure</h3>
+              <p>The site and workflow are transparent about contractor support versus work that requires licensed direction.</p>
+            </article>
+            <article class="why-card">
+              <h3>Practical field and office capability</h3>
+              <p>Equipment, field support, and documentation workflows are organized around usable project outcomes.</p>
+            </article>
+            <article class="why-card">
+              <h3>Communication across stakeholders</h3>
+              <p>Optimacy can support coordination among surveyors, title, planners, owners, and development teams.</p>
+            </article>
+          </div>
+          <div class="trust-strip">
+            <span>Colorado service area</span>
+            <span>Supports licensed survey firms directly</span>
+            <span>Available for overflow and backlog support</span>
+            <span>Initial inquiries reviewed and followed up by email</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="page-shell contact-grid">
+          <div class="contact-copy">
+            <div class="section-heading">
+              <p class="section-label">Contact / Intake</p>
+              <h2>Share the project details and start the intake process.</h2>
+            </div>
+            <p>
+              Use the form to describe the property, boundary or documentation issue, timing, and any known survey or title questions.
+              Initial inquiries are reviewed and followed up by email at <a href="mailto:optimacycorp@gmail.com">optimacycorp@gmail.com</a>.
+            </p>
+            <div class="checklist">
+              <p class="micro-label">Helpful before you submit</p>
+              <ul>
+                <li>Property location</li>
+                <li>Boundary or document issue</li>
+                <li>Known deadlines</li>
+                <li>Existing survey or title documents</li>
+              </ul>
+            </div>
             <ul class="contact-points">
               <li>Based in Colorado Springs, Colorado</li>
               <li>Phone: <a href="tel:17199648009">719-964-8009</a></li>
               <li>Email: <a href="mailto:optimacycorp@gmail.com">optimacycorp@gmail.com</a></li>
             </ul>
           </div>
+
           <form class="contact-form" id="contactForm">
             <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" class="hp-field" />
             <label>
@@ -201,6 +419,7 @@
               <select name="serviceType" required>
                 <option value="">Select one</option>
                 <option>Boundary and title research</option>
+                <option>Boundary discrepancy / record conflict</option>
                 <option>Survey field support</option>
                 <option>Documentation support</option>
                 <option>Coordination with survey or title professionals</option>
@@ -212,15 +431,33 @@
               <input type="text" name="timeline" placeholder="Example: urgent, this month, planning stage" />
             </label>
             <label>
-              Project Details*
-              <textarea name="message" rows="6" required></textarea>
+              Tell us what is happening*
+              <textarea
+                name="message"
+                rows="7"
+                placeholder="Describe the property, issue, timeline, and any known title, survey, or access questions."
+                required
+              ></textarea>
+              <span class="field-help">Include the property, issue, timeline, and any known title, survey, or access questions.</span>
             </label>
             <button class="button button-primary" type="submit">Send Project Details</button>
+            <p class="submit-note">Initial inquiries are reviewed and followed up by email.</p>
             <p class="form-status" id="formStatus" aria-live="polite"></p>
           </form>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <p>Optimacy Geomatics Services LLC | Colorado geomatics support for research, field assistance, and project documentation.</p>
+        <p>
+          Compliance note: Optimacy does not represent Thomas Costandine as a currently licensed land surveyor. Licensed-direction
+          work is handled under the direction of licensed professionals where required.
+        </p>
+      </div>
+    </footer>
+
     <script src="/app.js"></script>
   </body>
 </html>
