@@ -80,6 +80,12 @@ function validatePayload(payload) {
     company: normalize(payload.company),
     propertyLocation: normalize(payload.propertyLocation),
     serviceType: normalize(payload.serviceType),
+    supportNeeds: Array.isArray(payload.supportNeeds)
+      ? payload.supportNeeds.map((item) => normalize(item)).filter(Boolean)
+      : normalize(payload.supportNeeds)
+        ? [normalize(payload.supportNeeds)]
+        : [],
+    existingDocuments: normalize(payload.existingDocuments),
     timeline: normalize(payload.timeline),
     message: normalize(payload.message),
     website: normalize(payload.website),
@@ -137,6 +143,8 @@ app.post('/api/contact', async (req, res) => {
     `Company: ${cleaned.company || 'Not provided'}`,
     `Property / Project Location: ${cleaned.propertyLocation || 'Not provided'}`,
     `Service Needed: ${cleaned.serviceType}`,
+    `Support Needs: ${cleaned.supportNeeds.length ? cleaned.supportNeeds.join(', ') : 'Not provided'}`,
+    `Existing Documents: ${cleaned.existingDocuments || 'Not provided'}`,
     `Timeline: ${cleaned.timeline || 'Not provided'}`,
     '',
     'Project details:',
@@ -158,6 +166,8 @@ app.post('/api/contact', async (req, res) => {
         <p><strong>Company:</strong> ${escapeHtml(cleaned.company || 'Not provided')}</p>
         <p><strong>Property / Project Location:</strong> ${escapeHtml(cleaned.propertyLocation || 'Not provided')}</p>
         <p><strong>Service Needed:</strong> ${escapeHtml(cleaned.serviceType)}</p>
+        <p><strong>Support Needs:</strong> ${escapeHtml(cleaned.supportNeeds.length ? cleaned.supportNeeds.join(', ') : 'Not provided')}</p>
+        <p><strong>Existing Documents:</strong> ${escapeHtml(cleaned.existingDocuments || 'Not provided')}</p>
         <p><strong>Timeline:</strong> ${escapeHtml(cleaned.timeline || 'Not provided')}</p>
         <p><strong>Project Details:</strong></p>
         <p>${escapeHtml(cleaned.message).replace(/\n/g, '<br>')}</p>

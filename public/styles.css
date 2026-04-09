@@ -32,6 +32,12 @@ body {
     linear-gradient(180deg, #f9fbfc 0%, #ffffff 18%, #f8f5ef 100%);
 }
 
+body.header-scrolled .site-header {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom-color: rgba(18, 38, 63, 0.12);
+  box-shadow: 0 8px 24px rgba(17, 34, 58, 0.08);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -70,6 +76,7 @@ a {
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid rgba(18, 38, 63, 0.08);
   backdrop-filter: blur(12px);
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .header-inner {
@@ -78,6 +85,11 @@ a {
   justify-content: space-between;
   gap: 1.25rem;
   min-height: 90px;
+  transition: min-height 180ms ease;
+}
+
+body.header-scrolled .header-inner {
+  min-height: 78px;
 }
 
 .brand {
@@ -92,6 +104,12 @@ a {
   height: 104px;
   object-fit: contain;
   flex: 0 0 auto;
+  transition: width 180ms ease, height 180ms ease;
+}
+
+body.header-scrolled .brand img {
+  width: 84px;
+  height: 84px;
 }
 
 .brand-copy {
@@ -182,14 +200,12 @@ a {
   margin-bottom: 1.4rem;
 }
 
-.hero-lockup img {
-  width: clamp(96px, 12vw, 124px);
-  height: clamp(96px, 12vw, 124px);
-  object-fit: contain;
+.hero-lockup-text-only {
+  display: block;
 }
 
 .hero-lockup-text {
-  margin: 0.25rem 0 0;
+  margin: 0;
   font-size: 1rem;
   color: var(--muted);
 }
@@ -368,7 +384,16 @@ label,
   margin-bottom: 2rem;
 }
 
+.section-intro {
+  margin: -0.75rem 0 1.4rem;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 .audience-grid,
+.why-call-grid,
 .service-grid,
 .case-study-grid,
 .equipment-grid,
@@ -378,6 +403,7 @@ label,
 }
 
 .audience-grid,
+.why-call-grid,
 .service-grid,
 .equipment-grid,
 .why-grid {
@@ -389,6 +415,7 @@ label,
 }
 
 .audience-card,
+.why-call-card,
 .service-card,
 .case-study,
 .equipment-card,
@@ -400,6 +427,7 @@ label,
 }
 
 .audience-card,
+.why-call-card,
 .service-card,
 .why-card {
   display: grid;
@@ -407,6 +435,7 @@ label,
 }
 
 .audience-card p,
+.why-call-card p,
 .service-card p,
 .why-card p,
 .equipment-card p,
@@ -433,6 +462,14 @@ label,
   color: var(--steel);
   font-weight: 700;
   text-decoration: none;
+}
+
+.why-call-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9fb 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.55rem;
 }
 
 .outcome-line {
@@ -545,6 +582,34 @@ label {
   font-weight: 700;
 }
 
+.support-needs {
+  margin: 0;
+  padding: 1rem 1rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fbfcfd;
+}
+
+.support-needs legend {
+  padding: 0 0.35rem;
+  font-weight: 700;
+}
+
+.support-needs label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.55rem;
+  font-weight: 600;
+}
+
+.support-needs input[type="checkbox"] {
+  width: 18px;
+  min-height: 18px;
+  height: 18px;
+  padding: 0;
+}
+
 input,
 select,
 textarea {
@@ -622,6 +687,12 @@ textarea:focus,
   font-size: 0.95rem;
 }
 
+.site-footer a {
+  text-decoration: none;
+  color: var(--steel);
+  font-weight: 700;
+}
+
 @media (max-width: 1080px) {
   .header-inner {
     min-height: 84px;
@@ -683,6 +754,7 @@ textarea:focus,
   }
 
   .audience-grid,
+  .why-call-grid,
   .service-grid,
   .case-study-grid,
   .equipment-grid,
@@ -710,6 +782,11 @@ textarea:focus,
     height: 78px;
   }
 
+  body.header-scrolled .brand img {
+    width: 72px;
+    height: 72px;
+  }
+
   .brand-copy strong {
     font-size: 0.95rem;
   }
@@ -725,11 +802,6 @@ textarea:focus,
   .hero-grid {
     gap: 1.4rem;
     padding-bottom: 1.75rem;
-  }
-
-  .hero-lockup img {
-    width: 96px;
-    height: 96px;
   }
 
   h1 {

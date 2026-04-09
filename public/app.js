@@ -4,6 +4,10 @@ const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.getElementById('siteNav');
 const mainContent = document.getElementById('main-content');
 
+function syncHeaderState() {
+  document.body.classList.toggle('header-scrolled', window.scrollY > 18);
+}
+
 function closeMenu() {
   if (!menuToggle || !siteNav) {
     return;
@@ -52,7 +56,9 @@ if (form && statusEl) {
     statusEl.classList.remove('error');
 
     const formData = new FormData(form);
+    const supportNeeds = formData.getAll('supportNeeds');
     const payload = Object.fromEntries(formData.entries());
+    payload.supportNeeds = supportNeeds;
     const submitButton = form.querySelector('button[type="submit"]');
     submitButton.disabled = true;
 
@@ -81,3 +87,6 @@ if (form && statusEl) {
     }
   });
 }
+
+syncHeaderState();
+window.addEventListener('scroll', syncHeaderState, { passive: true });
