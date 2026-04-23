@@ -88,12 +88,7 @@ function validatePayload(payload) {
     existingDocuments: normalize(payload.existingDocuments),
     timeline: normalize(payload.timeline),
     message: normalize(payload.message),
-    website: normalize(payload.website),
   };
-
-  if (cleaned.website) {
-    return { ok: false, error: 'Spam filter triggered.' };
-  }
 
   if (!cleaned.name || !cleaned.email || !cleaned.message || !cleaned.serviceType) {
     return { ok: false, error: 'Please complete the required fields.' };
