@@ -523,6 +523,11 @@ label,
   background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
 }
 
+.equipment-card-wide {
+  grid-column: span 2;
+  min-height: auto;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
@@ -760,6 +765,10 @@ textarea:focus,
   .equipment-grid,
   .why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .equipment-card-wide {
+    grid-column: auto;
   }
 }
 
